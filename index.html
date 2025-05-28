@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Pion-Tissalien</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+            clearInterval(timer);
+            }
+        }, step);
+        }
+        counter("spec-parties", 0, 4, 900);
+        counter("spec-member", 0, 100, 1250);
+        counter("spec-masters", 0, 10, 1000);
+        });
+    </script>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+</head>
+<body>
+    <header>
+        <h1 id="home"><a href="index.html">Pion-Tissalien</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="horaire.html" id="Horaire">Info pratique</a></li>
+                <li><a href="chall.html" id="defi">Défi</a></li>
+                <li><a href="contact.html" id="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="principal">
+            <article class="intro">
+                <h1>Apprenez à appréciez les échecs</h1>
+                <p>Venez apprendre, exercer les échecs avec notre équipe passionné et motivés de professionnel.</p>
+                <a href="horaire.html" id="button">Inscrivez-vous</a>
+            </article>
+            <article class="intro-stats">
+                <img src="img/masters.png" alt="entraineurs">
+                <div class="stats">
+                    <img src="img/chess1.png" alt="Tour et pions d'échec">
+                    <div class="specification">
+                        <div class="spec">
+                            <p id="spec-parties">4</p>
+                            <p>PARTIES</p>
+                        </div>
+                        <div class="spec">
+                            <P id="spec-member">100+</P>
+                            <P>MEMBRES</P>
+                        </div>
+                        <div class="spec">
+                            <p id="spec-masters">10</p>
+                            <p>MASTERS</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="design-line"></div>
+        </section>
+        <section class="about">
+            <div class="about-separator">
+                <div class="separator"></div>
+                <h2>Pourquoi nous</h2>
+                <img src="img/question.svg" alt="?" id="question">
+                <div class="separator"></div>
+            </div>
+            <article class="about-us">
+                <div class="passion card">
+                    <div class="type-logo">
+                        <img src="img/users.svg" alt="">
+                    </div>
+                    <h3>Équipe passioné</h3>
+                    <p>Une équipe de passioné d’échec depuis toujours, avide de faire découvir leur univers, leur passion pour le sport de plateau, avide de reléguer leur savoir pour faire aimer les échecs.</p>
+                </div>
+                <div class="turnament card">
+                    <div class="type-logo">
+                        <img src="img/users.svg" alt="">
+                    </div>
+                    <h3>Compétition</h3>
+                    <p>Les membres de l’équipe on tous déjà participé a des multiples compétion d’échecs dont les mondiaux.</p>
+                </div>
+                <img src="img/queen.png" alt="reine" id="queen">
+                <div class="free card">
+                    <div class="type-logo">
+                        <img src="img/users.svg" alt="">
+                    </div>
+                    <h3>Gratuit</h3>
+                    <p>Certains de nos cours sont gratuit pour faire découvrir au plus grand nombre les échecs. Il est aussi possible de prendre des cours privé avec nos Masters.</p>
+                </div>
+                <div class="accessible card">
+                    <div class="type-logo">
+                        <img src="img/users.svg" alt="">
+                    </div>
+                    <h3>Accessible</h3>
+                    <p>Les cours sont acessible à tout le monde et a n’importe quel niveau, du débutant à l’expert, notre équipe sera ravi.</p>
+                </div>
+            </article>
+        </section>
+        <section>
+            <div class="actu-image"><img src="img/actu.svg" alt="Actualités"></div>
+            <div class="actu-separator">
+                <div class="separator"></div>
+                <h2>Actualités</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="actu-container">
+                <div class="actu-content">
+                    <div class="actu-card">
+                        <img src="img/magnus.png" alt="magnus">
+                        <div class="actu-content">
+                            <div class="actu-content-title">
+                                <h4>Magnus Calrsen</h4>
+                                <p>21.05.24</p>
+                            </div>
+                            <p class="actu-type">Championnat</p>
+                            <p>Victoire de notre masters au championnat du monde des échecs, il a sû prendre l’avantage sur l’adversaire et a remporter le titre de champion du monde des échecs. Félicitiation à lui.</p>    
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="img/ding.png" alt="ding liren">
+                        <div class="actu-content">
+                            <div class="actu-content-title">
+                                <h4>Ding Liren</h4>
+                                <p>28.01.24</p>
+                            </div>
+                            <p class="actu-type">Championnat</p>
+                            <p>Notre jeûne espoir a une fois de plus fait ces preuves en terminant 3 ème du championnat chinois d’échecs.</p>    
+                        </div>
+                    </div>
+                    <div class="actu-card">
+                        <img src="img/alireza.png" alt="magnus">
+                        <div class="actu-content">
+                            <div class="actu-content-title">
+                                <h4>Alireza Firouzja</h4>
+                                <p>02.12.23</p>
+                            </div>
+                            <p class="actu-type">Club</p>
+                            <p>Arrivé du nouveau master Alireza Firouzja, d’origine franco-iranienne. Passioné d’échec depuis le plus jeûne âge, il a travailler dur pour en arriver aujourd’hui.</p>    
+                        </div>
+                    </div>
+                </div>
+                <img src="img/king.png" alt="king" id="king">
+            </div>
+        </section>
+        <a href="#" class="top">&#8593;</a>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

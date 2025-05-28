@@ -1,0 +1,83 @@
+#horaire {
+    color: white;
+    font-weight: bold;
+}
+
+.principal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse; 
+    margin-top: 40px;
+}
+
+.horaire-table th, td{
+    border: 2px solid #515151;
+    padding: 15px;
+}
+
+iframe {
+    margin-top: 20px;
+}
+
+.horaire-card {
+    background-color: #4d4d4d;
+    border-radius: 8px;
+    width: 350px;
+    padding-bottom: 25px;
+}
+
+.horaire-card h3{
+    background-color: #313131;
+    border-radius: 8px 8px 0 0;
+    padding: 25px 5px 15px 5px;
+}
+
+.horaire-card span {
+    font-weight: bolder;
+    font-size: 2em;
+    color: white;
+}
+
+.tarif {
+    padding-top: 25px;
+}
+
+.tarif table {
+    margin: auto;
+}
+
+.tarif td {
+    font-size: 0.7em;
+}
+
+#close {
+    color: red;
+}
+
+.horaire {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+.jeune {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.adulte {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.pro {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
